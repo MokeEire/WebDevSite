@@ -39,52 +39,67 @@
 	<main>
 		{@render children()}
 	</main>
+
+	
 </div>
 
 <footer>
-	<p>© 2024 Intro to Web Development</p>
-</footer>
+		<p>© 2024 Intro to Web Development</p>
+	</footer>
 
 <style>
 	.page-layout {
 		display: flex;
-		flex-flow: row wrap;
-		min-height: 90vh;
-		align-content: flex-start;
+		flex-flow: column nowrap;
+		min-height: calc(100vh - var(--header-height) - var(--footer-height));
 	}
 
 	section.header {
 		width: 100%;
-		height: 5vh;
-		display: flex;
-		align-items: center;
-		font-size: 24px;
 		padding: 8px 16px;
+		font-size: 24px;
 		background-color: whitesmoke;
-	}
-
-	@media screen and (min-width: 600px) {
-		section.header {
-			position: sticky;
-			top: 0;
-		}
-
-		footer {
-			position: sticky;
-			bottom: 0;
-		}
+		height: var(--header-height);
 	}
 
 	footer {
 		width: 100%;
-		height: 5vh;
-		align-self: flex-end;
-		align-content: center;
+		display: flex;
 		text-align: center;
-		background-color: snow;
+		align-items: center;
+		justify-content: center;
+		background-color: whitesmoke;
+		height: var(--footer-height);
+		margin-top: auto;
 	}
+
 	main {
-		flex: 1 1 300px;
 		padding: 16px;
+	}
+
+	/* Mobile: everything scrolls naturally, sidebar above content */
+	@media screen and (max-width: 599px) {
+		.page-layout {
+			flex-direction: column;
+		}
+	}
+
+	/* Desktop: sticky header/sidebar/footer, side-by-side layout */
+	@media screen and (min-width: 600px) {
+		.page-layout {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		section.header {
+			position: sticky;
+			top: 0;
+			z-index: 10;
+		}
+
+
+		main {
+			flex: 1 1 300px;
+		}
 	}
 </style>
