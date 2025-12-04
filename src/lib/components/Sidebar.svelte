@@ -13,13 +13,28 @@
 </nav>
 
 <style>
+
+	nav {
+		flex: 0 1 400px;
+	}
+	nav ul {
+		display: flex;
+		flex-flow: column nowrap;
+		list-style: none;
+	}
+
+
 	nav ul li a {
-		border-radius: 16px;
-		padding: 4px 8px;
+		display: block;
+		padding: 4px 8px 4px 16px;
+		text-decoration: none;
+
 	}
 	.active {
 		font-weight: bold;
 		background-color: blue;
+		background-origin: padding-box;
 		color: white;
+		border-radius: 0 16px 16px 0;
 	}
 </style>
