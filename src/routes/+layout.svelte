@@ -31,26 +31,25 @@
 	<link rel="stylesheet" href="../reset.css"> -->
 </svelte:head>
 
+<section class="header">Intro to Web Development</section>
+
 <div class="page-layout">
-
-	<section class="header">Intro to Web Development</section>
-
 	<Sidebar />
 
 	<main>
 		{@render children()}
 	</main>
-
-	<footer>
-		<p>© 2024 Intro to Web Development</p>
-	</footer>
 </div>
+
+<footer>
+	<p>© 2024 Intro to Web Development</p>
+</footer>
 
 <style>
 	.page-layout {
 		display: flex;
 		flex-flow: row wrap;
-		min-height: 100vh;
+		min-height: 90vh;
 		align-content: flex-start;
 	}
 
@@ -60,7 +59,20 @@
 		display: flex;
 		align-items: center;
 		font-size: 24px;
-		padding: 8px 16px
+		padding: 8px 16px;
+		background-color: whitesmoke;
+	}
+
+	@media screen and (min-width: 600px) {
+		section.header {
+			position: sticky;
+			top: 0;
+		}
+
+		footer {
+			position: sticky;
+			bottom: 0;
+		}
 	}
 
 	footer {
@@ -69,9 +81,10 @@
 		align-self: flex-end;
 		align-content: center;
 		text-align: center;
+		background-color: snow;
 	}
 	main {
-		flex: 3 1 480px;
+		flex: 1 1 300px;
 		padding: 16px;
 	}
 </style>
