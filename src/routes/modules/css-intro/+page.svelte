@@ -1,1 +1,0 @@
-<h1>Getting Started with CSS</h1>

@@ -1,1 +1,0 @@
-<h1>Exploring Arrays, Loops, and Conditional Statements</h1>
