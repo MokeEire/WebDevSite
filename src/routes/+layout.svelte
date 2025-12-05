@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="../reset.css"> -->
 </svelte:head>
 
-<section class="header">Intro to Web Development</section>
+<section class="header"><a href="/">Intro to Web Development</a></section>
 
 <div class="page-layout">
 	<Sidebar />
@@ -60,6 +60,11 @@
 		font-size: 24px;
 		background-color: whitesmoke;
 		height: var(--header-height);
+	}
+
+	section.header a {
+		text-decoration: none;
+		color: inherit;
 	}
 
 	footer {
