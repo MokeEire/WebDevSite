@@ -47,7 +47,7 @@ code {
 
 @media screen and (min-width: 600px) {
 	.module {
-		margin: 16px auto;
+		margin: 16px auto 16px 24px;
 		max-width: 960px;
 	}
 }
