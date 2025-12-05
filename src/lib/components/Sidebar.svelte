@@ -31,7 +31,7 @@
 
     nav ul li a {
         display: block;
-        padding: 4px 8px 4px 16px;
+        padding: 4px 8px 4px 24px;
         text-decoration: none;
     }
 
