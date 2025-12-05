@@ -1,8 +1,53 @@
 :root {
-    --header-height: 48px;
-    --footer-height: 32px;
+	--header-height: 48px;
+	--footer-height: 32px;
 }
 
 body {
-    font-family: "Titillium Web", sans-serif
+	font-family: 'Titillium Web', sans-serif;
+}
+
+/* Module styles */
+
+.module {
+	padding: 8px 4px;
+}
+
+.module p {
+	margin-bottom: 16px;
+	line-height: 2;
+	font-size: 1.25em;
+}
+
+.module ul {
+	list-style: inside;
+}
+
+.module p+ul {
+	margin-left: 5%;
+}
+
+pre {
+	background-color: #f4f4f4;
+	border-radius: 8px;
+	margin-bottom: 16px;
+}
+
+code {
+	font-family: 'Geist Mono', monospace;
+
+	padding: 2px 4px;
+}
+
+.code-example {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+	.module {
+		margin: 16px auto;
+		max-width: 960px;
+	}
 }
