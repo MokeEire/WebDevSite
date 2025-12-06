@@ -9,14 +9,12 @@
     );
 	
     let pageTitle = $derived(
-        currentModule?.title || 'Module Not Found'
+        `${currentModule.number}. ${currentModule?.title}` || 'Module Not Found'
     )
 
     let pageDesc = $derived(
         currentModule?.description || ''
     )
-
-    $inspect(currentModule)
 
 </script>
 
