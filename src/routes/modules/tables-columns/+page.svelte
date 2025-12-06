@@ -64,7 +64,7 @@
 <p>
 	But I will try to break down the example in the same way the textbook does.
 	The textbook uses a radio station schedule, so I will use my <a href="https://laist.com/program-schedule">local NPR
-	station's schedule as an example. (I'm only going to do a portion of the schedule for simplicity)
+	station's schedule</a> as an example. (I'm only going to do a portion of the schedule for simplicity)
 	Below is the table we'll be building towards:
 </p>
 
