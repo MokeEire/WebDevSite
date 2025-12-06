@@ -3,22 +3,27 @@
     let { children } = $props();
 
     import { page } from '$app/stores';
+
+    let currentModule = $derived(
+        $page.data.currentModule
+    );
 	
-    const { currentModule } = $page.data;
-
     let pageTitle = $derived(
-        `${currentModule.number}. ${currentModule.title}` || 'Module Not Found'
+        currentModule?.title || 'Module Not Found'
     )
 
-    let moduleDesc = $derived(
-        currentModule?.description || 'Module Not Found'
+    let pageDesc = $derived(
+        currentModule?.description || ''
     )
+
+    $inspect(currentModule)
+
 </script>
 
 <h1>{pageTitle}</h1>
 
 <p>
-    {moduleDesc}
+    {pageDesc}
 </p>
 
 <hr>
