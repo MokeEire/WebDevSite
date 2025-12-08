@@ -7,23 +7,34 @@ body {
 	font-family: 'Titillium Web', sans-serif;
 }
 
-/* Module styles */
-
-.module {
-	padding: 8px 4px;
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 16px;
 }
 
-.module p {
+p {
 	margin-bottom: 16px;
 	line-height: 2;
 	font-size: 1.25em;
 }
 
-.module ul {
-	list-style: inside;
+/* Module styles */
+
+article.module {
+	padding: 8px 4px;
 }
 
-.module p+ul {
+article.module h1 {
+	font-size: 2.2em;
+	margin-bottom: 8px;
+}
+
+article.module ul {
+	list-style: inside;
+	margin-bottom: 8px;
+}
+
+article.module p+ul {
 	margin-left: 5%;
 }
 

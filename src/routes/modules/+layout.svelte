@@ -26,14 +26,14 @@
 
 <hr>
 
-<div class="module">
+<article class="module">
     {@render children()}
-</div>
+</article>
 
 <style>
     h1 {
         font-weight: 700;
-        font-size: 2rem;
+        font-size: 2.5em;
         margin-bottom: 8px;
     }
 
