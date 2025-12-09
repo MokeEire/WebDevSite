@@ -78,6 +78,13 @@
 		margin-top: auto;
 	}
 
+	footer p {
+		line-height: normal;
+		margin: 0;
+		font-size: 14px;
+		opacity: .9;
+	}
+
 	main {
 		padding: 16px;
 	}
