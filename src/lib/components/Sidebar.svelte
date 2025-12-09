@@ -5,7 +5,7 @@
 
 <nav>
 	<ul>
-		<li><a href="/" class:active={$page.url.pathname === '/'}>Home</a></li>
+		<li style="margin-left: 16px;">Modules</li>
 		{#each modules as module}
 			<li>
 				<a
@@ -20,7 +20,7 @@
 
 <style>
 	nav {
-        margin-top: 8px;
+        margin: 16px 0;
     }
 
     nav ul {
@@ -29,17 +29,26 @@
         list-style: none;
     }
 
-    nav ul li a {
+    nav ul li {
         display: block;
-        padding: 4px 8px 4px 24px;
-        text-decoration: none;
     }
 
-    .active {
+    nav ul li a {
+        display: block;
+        text-decoration: none;
+        padding: 4px 8px 4px 16px;
+    }
+
+    nav ul li a:visited {
+        color: blue;
+    }
+
+    nav ul li a.active {
         font-weight: bold;
         background-color: blue;
         color: white;
         border-radius: 0 16px 16px 0;
+        border-left: 8px solid blue;
     }
 
     /* Mobile: sidebar full width, scrolls with page */
