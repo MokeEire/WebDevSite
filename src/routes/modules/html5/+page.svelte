@@ -1,5 +1,6 @@
 <script>
     import MDNLink from "$lib/components/MDNLink.svelte";
+    import ElementTable from "./ElementTable.svelte";
 </script>
 
 <p>
@@ -73,57 +74,4 @@
     but be sure to check out the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">MDN's HTML elements reference</a> for the comprehensive list.
 </p>
 
-<table>
-    <thead>
-        <tr>
-            <th>Category</th>
-            <th>Element</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="5">Sectioning</td>
-            <td><MDNLink element="h1" /> to <MDNLink element="h6" /></td>
-            <td>Headings, with <MDNLink element="h1" /> being the highest level and <MDNLink element="h6" /> the lowest.</td>
-        </tr>
-        <tr>
-            <td><MDNLink element="main" /></td>
-        </tr>
-        <tr>
-            <td><MDNLink element="nav" /></td>
-        </tr>
-        <tr>
-            <td><MDNLink element="footer" /></td>
-        </tr>
-        <tr>
-            <td><MDNLink element="aside" /></td>
-        </tr>
-        <tr>
-            <td>Grouping / Text content</td>
-            <td><MDNLink element="p" /></td>
-            <td>Paragraphs of text.</td>
-        </tr>
-        <tr>
-            <td><MDNLink element="blockquote" /></td>
-            <td>A piece of text that is a quotation.</td>
-        </tr>
-        <tr>
-            <td><MDNLink element="ul" />, <MDNLink element="ol" />, <MDNLink element="li" /></td>
-            <td>Unordered and ordered lists, with list items.</td>
-        </tr>
-        <tr>
-            <td><MDNLink element="div" /></td>
-            <td>A generic container for grouping elements, often used for styling or layout purposes.</td>
-        </tr>
-        <tr>
-            <td>Text-level / Inline-text</td>
-            <td><MDNLink element="a" /></td>
-            <td>Hyperlinks to other pages or resources.</td>
-        </tr>
-        <tr>
-            <td><MDNLink element="a" /></td>
-            <td>Hyperlinks to other pages or resources.</td>
-        </tr>
-    </tbody>
-</table>
+<ElementTable />
