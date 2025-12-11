@@ -5,6 +5,7 @@
 
 body {
 	font-family: 'Titillium Web', sans-serif;
+	font-size: 16px;
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
 p {
 	margin-bottom: 16px;
 	line-height: 2;
-	font-size: 1.25em;
+	font-size: 1.1em;
 }
 
 /* Module styles */
@@ -31,7 +32,8 @@ article.module h1 {
 
 article.module ul {
 	list-style: inside;
-	margin-bottom: 8px;
+	margin-bottom: 1em;
+	font-size: 1.1em;
 }
 
 article.module p+ul {
@@ -39,15 +41,22 @@ article.module p+ul {
 }
 
 pre {
-	background-color: #f4f4f4;
+	background-color: #0d1851;
 	border-radius: 8px;
 	margin-bottom: 16px;
+	white-space: collapse;
 }
 
 code {
 	font-family: 'Geist Mono', monospace;
-
 	padding: 2px 4px;
+}
+
+pre > code {
+	color: #a9d8f6;
+	display: block;
+	overflow-x: auto;
+	white-space: pre;
 }
 
 .code-example {
