@@ -1,18 +1,20 @@
 <script>
-    let { element = '', property = '', children } = $props();
+    let { element = '', property = '', attribute = '', children } = $props();
     
     // Determine MDN URL based on type
     let url = $derived(
-        element 
-            ? `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${element}`
+        attribute 
+            ? `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${encodeURIComponent(element)}#${encodeURIComponent(attribute)}`
+            : element 
+            ? `https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${encodeURIComponent(element)}`
             : property
-            ? `https://developer.mozilla.org/en-US/docs/Web/CSS/${property}`
+            ? `https://developer.mozilla.org/en-US/docs/Web/CSS/${encodeURIComponent(property)}`
             : '#'
     );
     
     // Display text: use children if provided, otherwise use element/property name
     let displayText = $derived(
-        element ? `<${element}>` : property ? property : ''
+        attribute ? `${attribute}` : element ? `<${element}>` : property ? property : ''
     );
 </script>
 
