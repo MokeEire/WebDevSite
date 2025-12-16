@@ -31,7 +31,7 @@
 	<link rel="stylesheet" href="../reset.css"> -->
 </svelte:head>
 
-<section class="header"><a href="/">Intro to Web Development</a></section>
+<section class="header"><a href="/about">Intro to Web Development</a></section>
 
 <div class="page-layout">
 	<Sidebar />
